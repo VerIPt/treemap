@@ -259,7 +259,7 @@ void test32()
 #if 1
 
     {
-        cout << "operator--() begin() find()" << endl;
+        cout << "operator--() find()" << endl;
 
         // fill tree with some elements
         treemap<std::string, Payload> m;
@@ -271,14 +271,13 @@ void test32()
         // get last element via iterator
         auto it = m.find("Mars");
 
-        // Iterieren Sie bis zum Ende
+        // Iterieren 
         while (it != m.end())
         {
             cout << "it = " << it->first << ": " << it->second << endl;
             ++it;
         }
         
-
         assert(it == m.end());
         --it;
 
@@ -290,11 +289,49 @@ void test32()
             --it;
             cout << "  " << it->first << ": " << it->second << endl;
         }
-
-        
+    
     }
     assert(Payload::alive_count() == 0);
     cout << "done." << endl;
 
 #endif
+
+
+#if 1
+
+    {
+        cout << "operator--() beginn()" << endl;
+
+        // fill tree with some elements
+        treemap<std::string, Payload> m;
+        m["Uranus"] = Payload("Uranus");
+        m["Earth"] = Payload("Earth");
+        m["Pluto"] = Payload("Pluto");
+        m["Mars"] = Payload("Mars");
+
+        // get last element via iterator
+        auto it = m.begin();
+
+        // Iterieren
+        while (it != m.end())
+        {
+        
+            ++it;
+        }
+
+        assert(it == m.end());
+        --it;
+        assert((*it == make_pair(string("Uranus"), Payload("Uranus"))));
+        while (it != m.begin())
+        {
+            --it;
+        }
+    
+    }
+    assert(Payload::alive_count() == 0);
+    cout << "done." << endl;
+
+#endif
+
+
 }

@@ -158,9 +158,10 @@ namespace my
         // Versuchen Sie, den Schlüssel zu finden
         node_ptr node = find_(key);
 
-        // Wenn der Schlüssel nicht gefunden wurde, wird an ein neuer Knoten 
+        // Wenn der Schlüssel nicht gefunden wurde, wird ein neuer knoten erzeugt
         if (!node)
         {
+            // tie teilt das ergebnis von insert auf der zeiger ist node und rest wird ignoriert
             std::tie(node, std::ignore) = insert_(key, T());
         }
 
@@ -232,6 +233,8 @@ namespace my
         return find_(key) == nullptr ? 0 : 1;
     }
 
+    // for iterator
+    
     template <typename K, typename T>
     std::pair<typename treemap<K, T>::iterator, bool> treemap<K, T>::insert(const K &key, const T &value)
     {
