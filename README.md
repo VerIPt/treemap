@@ -1,15 +1,15 @@
-# TreeMap-Implementierung in C++
+# TreeMap Implementation in C++
 
-Dieses Repository enthält eine detaillierte Implementierung einer TreeMap in C++, einschließlich Iteratoren, Knoten und einer Testumgebung. Die Implementierung basiert auf den Konzepten, die in den bereitgestellten Dateien und der begleitenden Dokumentation beschrieben sind.
+This repository contains a detailed implementation of a TreeMap in C++, including iterators, nodes, and a test environment. The implementation is based on the concepts described in the provided files and the accompanying documentation.
 
-## Struktur
+## Structure
 
-- treemap.h: Definition der TreeMap-Klasse.
-- treemap_node.h: Definition der Knoten, die in der TreeMap verwendet werden.
-- treemap_iterator.h: Definition des Iterators für die TreeMap.
-- test32.cpp: Enthält grundlegende Tests für die Funktionalität der TreeMap.
-- main.cpp: Haupttesttreiber, der die Verwendung und Funktionalität der TreeMap demonstriert.
+- `treemap.h`: Definition of the TreeMap class.
+- `treemap_node.h`: Definition of the nodes used in the TreeMap.
+- `treemap_iterator.h`: Definition of the TreeMap iterator.
+- `test32.cpp`: Contains basic tests for the TreeMap's functionality.
+- `main.cpp`: Main test driver demonstrating the use and functionality of the TreeMap.
 
-## Annerkennungen
+## Acknowledgments
 
-Dank an Hartmut Schirmacher von der Berliner Hochschule für Technik für die Bereitstellung der grundlegenden Struktur und Tests.
+Thanks to Hartmut Schirmacher of Berliner Hochschule für Technik for providing the basic structure and tests.
